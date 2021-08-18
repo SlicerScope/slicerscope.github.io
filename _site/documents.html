@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Documents | SlicerScope</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Documents" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A 3D-Slicer based open platform for whole slide histopathology image computing" />
+<meta property="og:description" content="A 3D-Slicer based open platform for whole slide histopathology image computing" />
+<link rel="canonical" href="http://localhost:4000/documents.html" />
+<meta property="og:url" content="http://localhost:4000/documents.html" />
+<meta property="og:site_name" content="SlicerScope" />
+<script type="application/ld+json">
+{"headline":"Documents","@type":"WebPage","description":"A 3D-Slicer based open platform for whole slide histopathology image computing","url":"http://localhost:4000/documents.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="SlicerScope" />
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">SlicerScope</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/documents.html">Documents</a><a class="page-link" href="/download.html">Download</a><a class="page-link" href="/">About SlicerScope</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Documents</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="about-3d-slicer">About <a href="https://www.slicer.org/">3D Slicer</a></h2>
+<p>3D Slicer is an open source software platform for medical image informatics, image processing, and three-dimensional visualization. Built over two decades through support from the National Institutes of Health and a worldwide developer community, Slicer brings free, powerful cross-platform processing tools to physicians, researchers, and the general public.</p>
+
+<p>3D Slicer has a large user base and strong community support. It has a mature development and extension processes. Although most of users are in the radiological image related fields,such a large community would certainly be helpful to the computational pathology community. Slicer was originally designed for 3D and higherdimensional radiology images. Therefore it has more native support for 3D visualization and computing than other software designed from 2D image. Being a transnational research tool, rather than a commercially oriented software,such an infrastructure would be very beneficial for advancing multiplexing microscopy, 3D pathology, and even 3D+time dynamic microscopy. Based on these perspective needs, the3D Slicer fits very well as the infrastructure for a histopathology image computing platform that can accommodate both current needs and future applications.
+***</p>
+<h2 id="slicerscope-gui">SlicerScope GUI</h2>
+<p><img src="./assets/initGUI.png" width="800" height="500" align="center" />
+<!-- ![Basic GUI of SlicerScope](/assets/initGUI.png) --></p>
+
+<p>Following pathologists’ convention, mouse wheels as wellas the slide bar (in the module panel)can both be used for changing magnification  power in a continuous fashion.Internally, the images are formed by interpolation if theviewing magnification does not match with the resolutions stored in the hierarchical format of image pyramid.
+<img src="./assets/gui20x.png" width="800" height="500" align="center" />
+<!-- ![the slide at higher (10x) power](/assets/gui20x.png) --></p>
+
+<p>The whole panel can be divided into three sections. In the first section, the user sets the path to the WSI, as well as the location and magnification. The adjustment of these parameters are connected with mouse motions: left/right mouse drag for panning and the mouse wheel for changing magnification.For precise adjustment, user can use the numerical input.The second section loads the accompanying hdf5 file of the WSI, which stores the already computed information for this slide.The third section includes a list of computation modules. Clicking each button would invoke the computation on that current viewing region. Further functions could also be addedand their button may appear in this same section.
+<img src="./assets/paramPanel.png" width="600" height="400" align="center" />
+<!-- ![the slide at higher (10x) power](/assets/paramPanel.png) --></p>
+
+<hr />
+<h2 id="staining-decomposition">Staining decomposition</h2>
+<p>SlicerScope implement the vanilla version of color decomposition for its robustness, versatility, and computational efficiency.staining decomposition module in SlicerScope adopted from the Java implementation in ImageJ, the module implemented different decomposition configurations.
+<img src="./assets/StainingDecomposition.jpg" width="600" height="400" align="center" />
+<!-- ![the slide at higher (10x) power](/assets/StainingDecomposition.jpg) --></p>
+
+<hr />
+<h2 id="nucleus-segmentation">Nucleus segmentation</h2>
+<p>Nucleus segmentation module in SlicerScope, we propose a hierarchical approach which starts from the lower resolution level and adaptively adjusts the parameters while progressing into finer and finer resolution. we use mean-shift algorithm  decompose clumping regions into the individual nucleus.</p>
+
+<p>The average Dice coefficients for brain images is 0.71 with standard deviation of 0.048.Contour colors: yellow(GT), cyan (algorithm).
+<img src="./assets/brain_compare.png" width="700" height="200" align="center" />
+<!-- ![the slide at higher (10x) power](/assets/brain_compare.png) --></p>
+
+<p>The average Dice coefficients for all lung images  is 0.70 with standard deviation of 0.045.Contour colors: yellow(GT), cyan (algorithm).
+<img src="./assets/lung_compare.png" width="700" height="200" align="center" />
+<!-- ![the slide at higher (10x) power](/assets/lung_compare.png) --></p>
+
+<hr />
+<h2 id="gland-segmentation">Gland segmentation</h2>
+<p>SlicerScope propose a patch-based U-net algorithm to extract the gland region. We used the training and testing images from the GLAS colon gland segmentation challenge. The average Dice coefficient is 0.910 and the standard deviation is 0.043. Contour colors: yellow(GT), cyan (algorithm).
+<img src="./assets/glasWhole.png" width="700" height="200" align="center" />
+<!-- ![the slide at higher (10x) power](/assets/glasWhole.png) --></p>
+
+<hr />
+<h2 id="for-3d-pathology">For 3D pathology</h2>
+<p>One significant benefit of using 3D Slicer as the back-bone  structure for computational pathology lies in the fact that 3D Slicer was originally designed for three-and-higher dimensional image computing. This feature naturally fits the 3D pathology scenario. In situations such as confocal microscopic imaging of thecells, one may want to extract the 3D extent of each cells.SlicerScope can benefit from the richcontent of the existing modules from 3D Slicer.
+<img src="./assets/3d_pathology.png" width="700" height="200" align="center" /></p>
+
+<h1 id="how-to-build-slicerscope-from-source-code">How to build SlicerScope from source code?</h1>
+<ul>
+  <li>for <a href="https://slicer.readthedocs.io/en/latest/developer_guide/build_instructions/windows.html">windows</a></li>
+  <li>for <a href="https://slicer.readthedocs.io/en/latest/developer_guide/build_instructions/linux.html">Linux</a></li>
+  <li>for <a href="https://slicer.readthedocs.io/en/latest/developer_guide/build_instructions/macos.html">mac OS</a></li>
+</ul>
+
+<hr />
+<h1 id="how-to-extand-slicerscope">How to extand SlicerScope?</h1>
+<p>Being one of the leading open-source medical image computing platforms, 3D Slicer not only ships abundant algorithms with it, it also has a well-established mechanismthat the user can extend  Slicer with their own algorithms. To serve such a purpose, Slicer  provides three channels:the command-line interface, the python script interface, andthe c++ loadable interface. One need to consider the characteristics of the whole slide images in order to pick thetype of interface.</p>
+
+<h2 id="command-line-interface-cli">Command Line Interface (CLI)</h2>
+<p>CLIs are standalone executables with a limited input/output arguments complexity (simple argument types, no user interactions…). They are typically implemented in C++ (using ITK). SlicerScope allow running (almost) any Python script as a CLI module by providing an interface description .xml file.</p>
+
+<h2 id="loadable-modulesc">Loadable Modules(C++)</h2>
+<p>Loadable modules are C++ plugins that are built against Slicer. They define custom GUIs for their specific behavior as they have full control over the application.</p>
+
+<h2 id="scripted-modulespython">Scripted Modules(Python)</h2>
+<p>Full access to the API: VTK, Qt, MRML and Slicer,SimpleITK are fully wrapped.</p>
+
+<h1 id="more-information">More Information</h1>
+<ul>
+  <li>https://www.slicer.org/wiki/Documentation/Nightly/Developers/FAQ/Extensions#How_to_build_an_extension_.3F</li>
+  <li>https://www.slicer.org/wiki/Documentation/Nightly/Developers/Modules</li>
+  <li>https://www.slicer.org/wiki/Documentation/Nightly/Developers/ExtensionWizard</li>
+  <li>https://www.slicer.org/wiki/Documentation/Nightly/Developers/Build_Module</li>
+  <li>https://www.na-mic.org/wiki/2013_Project_Week_Breakout_Session:Slicer4Python</li>
+  <li>https://www.slicer.org/wiki/Documentation/Nightly/Training#Developing_and_contributing_extensions_for_3D_Slicer</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">SlicerScope</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">SlicerScope</li><li><a class="u-email" href="mailto:gaoyicn@outlook.com">gaoyicn@outlook.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/SlicerScope"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">SlicerScope</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A 3D-Slicer based open platform for whole slide histopathology image computing</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
